@@ -1,0 +1,60 @@
+---
+interface Props {
+  href?: string;
+  text?: string;
+  type?: "button" | "submit" | "reset";
+  variant?: "";
+  disabled?: boolean;
+  target?: "_self" | "_blank";
+}
+
+const {
+  href,
+  text = "Click",
+  type = "button",
+  variant = "primary",
+  disabled = false,
+  target = "_self",
+} = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      target={target}
+      aria-disabled={disabled}
+      class="
+    inline-flex items-center gap-3
+    px-6 py-3
+    rounded-xl
+    font-semibold text-black
+    bg-linear-to-r from-cyan-400 to-purple-500
+    shadow-lg shadow-cyan-500/30
+    transition-all duration-300
+    hover:scale-105 hover:shadow-xl
+    focus:outline-none focus:ring-2 focus:ring-cyan-400
+  "
+    >
+      <slot>{text}</slot>
+    </a>
+  ) : (
+    <button
+      type={type}
+      disabled={disabled}
+      class="
+    inline-flex items-center gap-3
+    px-6 py-3
+    rounded-xl
+    font-semibold text-black
+    bg-linear-to-r from-cyan-400 to-purple-500
+    shadow-lg shadow-cyan-500/30
+    transition-all duration-300
+    hover:scale-105 hover:shadow-xl
+    focus:outline-none focus:ring-2 focus:ring-cyan-400
+  "
+    >
+      <slot>{text}</slot>
+    </button>
+  )
+}

@@ -1,0 +1,5 @@
+@import "tailwindcss";
+:root {
+  --primary: 220 70% 50%;
+  --accent: 0 70% 55%;
+}

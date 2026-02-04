@@ -1,0 +1,90 @@
+---
+import Card from "../components/Card.astro";
+
+type ServiceCard = {
+  title: string;
+  icon: string;
+  content: string;
+};
+let ContentCard: ServiceCard[] = [
+  {
+    title: "Lading Page de Alto Impacto",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="none" stroke="#13daec" stroke-width="3"><path stroke-linejoin="round" d="M3 24a21 21 0 1 0 42 0a21 21 0 1 0-42 0"/><path stroke-linejoin="round" d="M15 24a9 21 0 1 1 18 0a9 21 0 1 1-18 0"/><path stroke-linecap="round" d="M4.5 31h39m-39-14h39"/></g></svg>`,
+    content:
+      "Diseño y desarrollo de páginas de destino optimizadas para conversión y experiencia de usuario.",
+  },
+  {
+    title: "Marketing Digital",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none" stroke="#0284c7" stroke-width="3"><path stroke-linejoin="round" d="M3 24a21 21 0 1 0 42 0a21 21 0 1 0-42 0"/><path stroke-linejoin="round" d="M15 24a9 21 0 1 1 18 0a9 21 0 1 1-18 0"/><path stroke-linecap="round" d="M4.5 31h39m-39-14h39"/></g></svg>`,
+    content:
+      "Estrategias de crecimiento y marketing digital para potencias tu presencia online.",
+  },
+  {
+    title: "Desarrollo Web a Medida",
+    icon: "",
+    content:
+      "Aplicaciones web personalizadas con las últimas teconologías y mejores prácticas.",
+  },
+  {
+    title: "Apps Móviles IOS/Android",
+    icon: "",
+    content:
+      "Desarrollo de apicaciones móviles nativas y multiplataforma de alto rendimiento.",
+  },
+  {
+    title: "Consultoría Tecnológica",
+    icon: "",
+    content:
+      "Análisis de procesos y asesoramiento para optimizar tu infraestructura tecnológica.",
+  },
+  {
+    title: "Automatización de Procesos",
+    icon: "",
+    content:
+      "Optimización digital y automatización para mejorar la eficiencia operativa.",
+  },
+  {
+    title: "Soluciones con IA",
+    icon: "",
+    content:
+      "Implementación de herramientas y sistemas basados en inteligencia artificial.",
+  },
+  {
+    title: "Branding Digital",
+    icon: "",
+    content:
+      "Creación de identidad visual y branding para empresas emergentes y establecidas.",
+  },
+  {
+    title: "Soporte Continuo",
+    icon: "",
+    content:
+      "Mantenimieno y soporte tecnológico 24/7 para asegurar la continuidad de tu negocio.",
+  },
+];
+---
+
+<section class:list={["text-center"]}>
+  <div>
+    <div class="grid mx-auto px-0 w-6/12">
+      <h2 class="text-[#13daec] text-xl md:text-3xl lg:text-3xl">Servicios</h2>
+      <h2 class="text-4xl px-10 py-4 font-bold md:text-6xl lg:text-6xl">Soluciones <span class="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">tecnológicas integrales</span></h2>
+      <p class="text-xl md:text-2xl lg:text-2xl px-4 text-[#94a3b8]">
+        Ofrecemos un portafolio completo de servicios diseñados para impulsar la
+        transformación digital de tu empresa.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-col-3 lg:grid-cols-3 gap-4 p-8 text-start">
+      {
+        ContentCard.map((item) => (
+          <Card
+            icon={item.icon}
+            title={item.title}
+            content={item.content}
+            variant="services"
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
