@@ -17,8 +17,9 @@ const titleHover = {
   services: "group-hover:text-[#13cee1]",
 };
 const underlineHover = {
-  services: "relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-linear-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 group-hover:after:w-full"
-}
+  services:
+    "relative inline-block text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-linear-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 group-hover:after:w-full",
+};
 ---
 
 <div
@@ -37,12 +38,12 @@ const underlineHover = {
   }
 
   <h3
-    class={`py-5 text-2xl font-bold transition-colors duration-200  ${titleHover[variant]} `}
+    class={`py-5 text-2xl md:text-3xl font-bold transition-colors duration-200  ${titleHover[variant]} `}
   >
     {title}
   </h3>
 
-  <p class=`mt-2 opacity-80`>
+  <p class=`mt-2 opacity-80 text-lg md:text-xl md:pr-14`>
     {content}
   </p>
   <div class=`w-full ${underlineHover[variant]}`></div>
