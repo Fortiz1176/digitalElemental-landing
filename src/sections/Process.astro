@@ -1,0 +1,67 @@
+---
+import Card from "../components/Card.astro";
+
+type ProcessTypes = {
+  title: string;
+  content: string;
+  icon: string;
+};
+let ContentCard: ProcessTypes[] = [
+  {
+    title: "Análisis",
+    content:
+      "Entendemos tu negocio, objetivos y desafíos para definir la mejor estrategia.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#13daec" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/></svg>`,
+  },
+  {
+    title: "Diseño",
+    content:
+      "Creamos prototipos y diseños que reflejan tu visión y necesidades del usuario.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="#13daec" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7.63 7.63l3.006 3.006M3.042 4.34l2.616 9.157c.778 2.723 2.933 4.6 5.764 4.6a5.6 5.6 0 0 0 1.264-.148c.392-.09.812-.001 1.097.283l2.46 2.46c.41.41 1.075.41 1.485 0l2.964-2.965a1.05 1.05 0 0 0 0-1.486l-2.455-2.455c-.284-.284-.373-.703-.284-1.094q.143-.624.145-1.27c0-2.832-1.877-4.987-4.6-5.765L4.341 3.042a1.05 1.05 0 0 0-1.3 1.299"/></svg>`,
+  },
+  {
+    title: "Desarrollo",
+    content:
+      "Construimos la solución con las mejores tecnologías y prácticas de desarrollo.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="#13daec" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 18l6-6l-6-6M8 6l-6 6l6 6"/></svg>`,
+  },
+  {
+    title: "Implementación",
+    content:
+      "Desplegamos tu proyecto con puebas exhaustivas y configuración óptima.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="#13daec" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0m1 7v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></g></svg>`,
+  },
+  {
+    title: "Optimización",
+    content:
+      "Monitoreamos y mejoramos continuamente para maximizar resultados.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="#13daec" stroke-linecap="round" stroke-width="2" d="M17 5v15m-5-9v9m-5-6v6"/></svg>`,
+  },
+];
+---
+
+<section class="mt-20">
+  <div class="grid mx-auto px-0 md:w-full lg:w-8/12 md:px-10 text-center">
+    <h2 class="text-[#13daec] text-xl md:text-3xl lg:text-3xl">
+      PROCESO DE TRABAJO
+    </h2>
+    <h2 class="text-4xl px-10 py-4 font-bold md:text-6xl lg:text-6xl">
+      De la idea a la <span
+        class="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
+        >realidad</span>
+    </h2>
+    <p class="text-xl md:text-2xl lg:text-2xl px-4 text-[#94a3b8]">
+      Nuestro proceso estructurado garantiza resultados excepcionales en cada
+      proyecto.
+    </p>
+  </div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-col-3 lg:grid-cols-5 gap-4 md:gap-4 p-8 text-center mx-auto"
+  >
+    {
+      ContentCard.map(({ title, content, icon }) => (
+        <Card title={title} content={content} icon={icon} variant="work" />
+      ))
+    }
+  </div>
+</section>

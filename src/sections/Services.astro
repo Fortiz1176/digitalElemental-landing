@@ -65,8 +65,7 @@ let ContentCard: ServiceCard[] = [
 ---
 
 <section class:list={["text-center"]}>
-  <div>
-    <div class="grid mx-auto px-0 w-6/12">
+    <div class="grid mx-auto px-0 md:w-full lg:w-8/12 md:px-10 text-center">
       <h2 class="text-[#13daec] text-xl md:text-3xl lg:text-3xl">Servicios</h2>
       <h2 class="text-4xl px-10 py-4 font-bold md:text-6xl lg:text-6xl">Soluciones <span class="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">tecnológicas integrales</span></h2>
       <p class="text-xl md:text-2xl lg:text-2xl px-4 text-[#94a3b8]">
@@ -74,7 +73,7 @@ let ContentCard: ServiceCard[] = [
         transformación digital de tu empresa.
       </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-col-3 lg:grid-cols-3 gap-4 md:gap-8 p-8 text-start">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-col-2 lg:grid-cols-3 gap-4 md:gap-8 p-8 text-start">
       {
         ContentCard.map((item) => (
           <Card
@@ -86,5 +85,4 @@ let ContentCard: ServiceCard[] = [
         ))
       }
     </div>
-  </div>
 </section>

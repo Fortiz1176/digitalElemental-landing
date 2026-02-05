@@ -5,6 +5,7 @@ interface CardProps {
   content?: string;
   icon?: AstroComponentFactory | string;
   image?: string;
+  order?: string;
   variant?: "services" | "work" | "team" | "testimonials" | "technologies";
 }
 const { title, content, icon, image, variant }: CardProps = Astro.props;
@@ -12,6 +13,21 @@ const { title, content, icon, image, variant }: CardProps = Astro.props;
 const variants = {
   services:
     "border border-[#222833] hover:shadow-lg shadow-[#13D9EB] hover-scale-105",
+  work: "border border-[#222833] hover-scale-105",
+};
+const iconStyles = {
+  services:
+    "w-20 h-20 rounded-2xl bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b] flex items-center justify-center shadow-lg shadow-cyan-500/10",
+  work: "w-20 h-20 rounded-2xl bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b] flex items-center justify-center shadow-lg shadow-cyan-500/10 mx-auto",
+};
+const titleStyles = {
+  services:
+    "py-5 text-2xl md:text-3xl font-bold transition-colors duration-200",
+  work: "text-center text-2xl font-bold my-2",
+};
+const contentStyles = {
+  services: "mt-2 opacity-80 text-lg md:text-xl md:pr-14",
+  work: "mt-2 opacity-80 text-md md:text-lg",
 };
 const titleHover = {
   services: "group-hover:text-[#13cee1]",
@@ -25,25 +41,14 @@ const underlineHover = {
 <div
   class={`group px-5 py-5 md:px-10 md:py-10 rounded-xl transition-all hover:scale-[1.02] ${variants[variant]}`}
 >
-  {
-    icon && (
-      <div
-        class="w-20 h-20 rounded-2xl
-         bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b]
-         flex items-center justify-center
-         shadow-lg shadow-cyan-500/10"
-        set:html={icon}
-      />
-    )
-  }
+  {image && <div set:html={image} />}
+  {icon && <div class={`${iconStyles[variant]}`} set:html={icon} />}
 
-  <h3
-    class={`py-5 text-2xl md:text-3xl font-bold transition-colors duration-200  ${titleHover[variant]} `}
-  >
+  <h3 class={`${titleStyles[variant]}  ${titleHover[variant]} `}>
     {title}
   </h3>
 
-  <p class=`mt-2 opacity-80 text-lg md:text-xl md:pr-14`>
+  <p class={`${contentStyles[variant]}`}>
     {content}
   </p>
   <div class=`w-full ${underlineHover[variant]}`></div>

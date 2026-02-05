@@ -1,0 +1,34 @@
+---
+import Card from "../components/Card.astro";
+
+type ClientsType = {
+  image: string;
+};
+
+let ContentCard: ClientsType[] = [
+  /* {
+    image: `<img src="https://i.pinimg.com/736x/3c/07/40/3c0740017fa1c2ca4b529179ef1ffb08.jpg" alt="">`,
+  }, */
+];
+---
+
+<section class="mt-20">
+  <div class="grid mx-auto px-0 md:w-full lg:w-8/12 md:px-10 text-center">
+    <h2 class="text-[#13daec] text-xl md:text-3xl lg:text-3xl">CLIENTES</h2>
+    <h2 class="text-4xl px-10 py-4 font-bold md:text-6xl lg:text-6xl">
+      Empresas que ya <span
+        class="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
+        >confían en Elemental</span
+      >
+    </h2>
+    <p class="text-xl md:text-2xl lg:text-2xl px-12 text-[#94a3b8]">
+      Trabajamos con empresas innovadoras que buscan transformar su presencia
+      digital.
+    </p>
+  </div>
+  <div>
+    {ContentCard.map((card) => (
+        <Card image={card.image}/>
+    ))}
+  </div>
+</section>
