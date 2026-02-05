@@ -1,0 +1,187 @@
+---
+// Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[#0F1219] text-[#94a3b8] border-t border-[#94a3b8]/50">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-14">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16"
+    >
+      <div class="space-y-6">
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl grid place-items-center font-bold text-black
+                   bg-linear-to-br from-cyan-400 to-purple-500"
+          >
+            E
+          </div>
+          <p class="text-white text-2xl font-semibold">Elemental</p>
+        </div>
+
+        <p class="text-lg leading-relaxed max-w-sm">
+          Consultora tecnológica moderna.<br />
+          Transformamos ideas en soluciones digitales<br />
+          que impulsan el crecimiento.
+        </p>
+
+        <div class="flex gap-4">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 grid place-items-center
+                   hover:bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b] hover:shadow-lg hover:shadow-cyan-500/10"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#94a3b8"
+              stroke-width="2"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2a4 4 0 0 1 2-3z"
+              ></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            aria-label="X"
+            class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 grid place-items-center
+                   hover:bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b] hover:shadow-lg hover:shadow-cyan-500/10"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#94a3b8"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M18 2 2 22"></path>
+              <path d="M2 2l20 20"></path>
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 grid place-items-center
+                   hover:bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b] hover:shadow-lg hover:shadow-cyan-500/10"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#94a3b8"
+              stroke-width="2"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="6"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="18" cy="6" r="1"></circle>
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            aria-label="GitHub"
+            class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 grid place-items-center
+                   hover:bg-linear-to-br from-[#0f172a] via-[#111827] to-[#1e293b] hover:shadow-lg hover:shadow-cyan-500/10"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#94a3b8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 19c-4 1.5-4-2.5-5-3"></path>
+              <path
+                d="M15 19v-3.5c0-1 .5-1.5 1-2-3 0-6-1-6-5a4 4 0 0 1 1-3s1-1 3 0a10 10 0 0 1 6 0c2-1 3 0 3 0a4 4 0 0 1 1 3c0 4-3 5-6 5 .5.5 1 1 1 2V19"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <p class="text-white font-semibold text-xl">Servicios</p>
+        <ul class="space-y-3">
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#"
+              >Landing Pages</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#"
+              >Marketing Digital</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#"
+              >Desarrollo Web</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Apps Móviles</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Consultoría</a>
+          </li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <p class="text-white font-semibold text-xl">Empresa</p>
+        <ul class="space-y-3">
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#"
+              >Sobre nosotros</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Equipo</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Clientes</a>
+          </li>
+          <li><a class="hover:text-[#13daec] transition" href="#">Blog</a></li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Carreras</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <p class="text-white font-semibold text-xl">Legal</p>
+        <ul class="space-y-3">
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Privacidad</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Términos</a>
+          </li>
+          <li>
+            <a class="hover:text-[#13daec] transition" href="#">Cookies</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="my-12 h-px w-full bg-white/10"></div>
+
+    <div
+      class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+    >
+      <p>© {year} Digital Elemental. Todos los derechos reservados.</p>
+
+      <p class="text-right">
+        Hecho con <span class="text-purple-500">💜</span> en España
+      </p>
+    </div>
+  </div>
+</footer>

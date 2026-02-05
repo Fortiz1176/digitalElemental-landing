@@ -6,9 +6,12 @@ type ClientsType = {
 };
 
 let ContentCard: ClientsType[] = [
-  /* {
-    image: `<img src="https://i.pinimg.com/736x/3c/07/40/3c0740017fa1c2ca4b529179ef1ffb08.jpg" alt="">`,
-  }, */
+  {
+    image: `https://i.pinimg.com/736x/3c/07/40/3c0740017fa1c2ca4b529179ef1ffb08.jpg`,
+  },
+  {
+    image: `https://i.pinimg.com/736x/3c/07/40/3c0740017fa1c2ca4b529179ef1ffb08.jpg`,
+  },
 ];
 ---
 
@@ -26,9 +29,10 @@ let ContentCard: ClientsType[] = [
       digital.
     </p>
   </div>
-  <div>
+  <div class="flex">
     {ContentCard.map((card) => (
         <Card image={card.image}/>
     ))}
   </div>
+  
 </section>

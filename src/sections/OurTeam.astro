@@ -1,3 +1,40 @@
+---
+import Card from "../components/Card.astro"
+
+type TeamType = {
+  title: string;
+  content: string,
+  initials: string,
+};
+
+let ContentCard: TeamType[] = [
+  {
+    title: "José",
+    content: "ForontEnd Developer",
+    initials: "JC"
+  },
+  {
+    title: "Angel",
+    content: "BackEnd Developer",
+    initials: "JC"
+  },
+  {
+    title: "Cano",
+    content: "DevOps",
+    initials: "JC"
+  },
+  {
+    title: "Fortiz",
+    content: "CEO",
+    initials: "JC"
+  },
+  {
+    title: "Pechugas",
+    content: "CEO",
+    initials: "JC"
+  },
+];
+---
 <section class="mt-20">
   <div class="grid mx-auto px-0 md:w-full lg:w-8/12 md:px-10 text-center">
     <h2 class="text-[#13daec] text-xl md:text-3xl lg:text-3xl">Nuestro Equipo</h2>
@@ -11,7 +48,11 @@
       Un equipo multidiciplinario apasionado por la tecnología y la innovación.
     </p>
   </div>
-  <div>
-    
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+    {
+      ContentCard.map(({title, content, initials}) => (
+        <Card title={title} content={content} initials={initials} variant="team"/>
+      ))
+    }
   </div>
 </section>
