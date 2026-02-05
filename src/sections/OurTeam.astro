@@ -5,37 +5,43 @@ type TeamType = {
   title: string;
   content: string,
   initials: string,
+  position: string
 };
 
 let ContentCard: TeamType[] = [
   {
-    title: "José",
-    content: "ForontEnd Developer",
-    initials: "JC"
+    title: "Fernando Zavala Elizondo",
+    content: "Backend Developer",
+    initials: "FZ",
+    position: "Project Management Professional"
   },
   {
-    title: "Angel",
-    content: "BackEnd Developer",
-    initials: "JC"
+    title: "José Angel Cano Fortiz",
+    content: "Frontend Developer",
+    initials: "JC",
+    position: "Lead Frontend Developer"
   },
   {
-    title: "Cano",
-    content: "DevOps",
-    initials: "JC"
+    title: "Israel Hernadez Dorantes",
+    content: "Software Developer",
+    initials: "IH",
+    position: "Lead IA Developer"
   },
   {
-    title: "Fortiz",
-    content: "CEO",
-    initials: "JC"
+    title: "Mario Alberto Martinez Vazquez",
+    content: "FullStack Developer",
+    initials: "MV",
+    position: "Teach Lead"
   },
   {
-    title: "Pechugas",
-    content: "CEO",
-    initials: "JC"
+    title: "Jonathan Santos Mejía",
+    content: "DevOps ",
+    initials: "JS",
+    position: "DevOps"
   },
 ];
 ---
-<section class="mt-20">
+<section id="equipo" class="mt-20">
   <div class="grid mx-auto px-0 md:w-full lg:w-8/12 md:px-10 text-center">
     <h2 class="text-[#13daec] text-xl md:text-3xl lg:text-3xl">Nuestro Equipo</h2>
     <h2 class="text-4xl px-10 py-4 font-bold md:text-6xl lg:text-6xl">
@@ -48,10 +54,10 @@ let ContentCard: TeamType[] = [
       Un equipo multidiciplinario apasionado por la tecnología y la innovación.
     </p>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 text-center">
     {
-      ContentCard.map(({title, content, initials}) => (
-        <Card title={title} content={content} initials={initials} variant="team"/>
+      ContentCard.map(({title, content, initials, position}) => (
+        <Card title={title} position={position} content={content} initials={initials} variant="team"/>
       ))
     }
   </div>
